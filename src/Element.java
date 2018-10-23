@@ -23,14 +23,28 @@ public class Element {
 
     public void rotate90CW() {
         for (int j = 0; j < (size / 2); j++) {
+            //int j = 0; //shell depth
             for (int i = j; i < ((size-j) - 1); i++) { //every loop rotates one 'peel' , like next layer of onion.
-                //int j = 0; //shell depth todo: rotate whole element for now only outer shell, skin of element
                 int max_idx = size - 1;
                 char temp = data[j][i]; //store A
                 data[j][i] = data[max_idx - i][j]; //move M on A place
                 data[max_idx - i][j] = data[max_idx - j][max_idx - i];// move P on M place
                 data[max_idx - j][max_idx - i] = data[i][max_idx - j];//move D on P place
                 data[i][max_idx - j] = temp;//move A on D place
+            }
+        }
+    }
+
+    public void rotate90CCW() {
+        for (int j = 0; j < (size / 2); j++) {
+            //int j = 0; //shell depth
+            for (int i = j; i < ((size-j) - 1); i++) { //every loop rotates one 'peel' , like next layer of onion.
+                int max_idx = size - 1;
+                char temp = data[j][i]; //store A
+                data[j][i] = data[i][max_idx-j]; //move D on A place
+                data[i][max_idx-j] = data[max_idx - j][max_idx - i];// move P on D place
+                data[max_idx - j][max_idx-i] = data[max_idx-i][j];//move M on P place
+                data[max_idx-i][j] = temp;//move A on M place
             }
         }
     }

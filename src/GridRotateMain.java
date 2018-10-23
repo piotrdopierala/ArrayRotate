@@ -10,7 +10,12 @@ public class GridRotateMain {
 
         e.prettyPrint();
 
+        /*
         e.rotate90CW();
+        e.rotate90CW();
+        e.rotate90CW();
+*/
+        e.rotate90CCW();
 
         System.out.println("----------------------");
         e.prettyPrint();
