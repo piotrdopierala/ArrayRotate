@@ -1,4 +1,4 @@
-public class Element {
+public class GridChar {
 
     public static final char[] ALPHABET = "abcdefghijklmnoprstuwvxyzABCDEFGHIJKLMNOPRSTUWVXYZ123456789".toCharArray();
     public static final int MAX_SIZE = (int) Math.sqrt(ALPHABET.length);
@@ -6,7 +6,7 @@ public class Element {
     int size;
     char[][] data;
 
-    public Element(int size) {
+    public GridChar(int size) {
         if (size > MAX_SIZE)
             size = MAX_SIZE;
         this.size = size;

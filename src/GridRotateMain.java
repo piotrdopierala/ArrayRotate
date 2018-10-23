@@ -5,19 +5,21 @@
 public class GridRotateMain {
     public static void main(String[] args) {
 
-        Element e = new Element(4);
-        e.fillChars();
+        GridInt e = new GridInt(TetrisElements.I.getArray());
 
         e.prettyPrint();
-
-        /*
+        System.out.println("-------------------");
         e.rotate90CW();
-        e.rotate90CW();
-        e.rotate90CW();
-*/
-        e.rotate90CCW();
-
-        System.out.println("----------------------");
+        e.alignLeft();
         e.prettyPrint();
+        System.out.println("-------------------");
+        e.rotate90CW();
+        e.prettyPrint();
+        System.out.println("-------------------");
+        e.rotate90CW();
+        e.alignTop();
+        e.prettyPrint();
+        System.out.println("-------------------");
+
     }
 }
